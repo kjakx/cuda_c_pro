@@ -1,0 +1,5 @@
+./sumArraysOnGPU-timer_256 Starting...
+Using Device 0: Tesla V100-PCIE-16GB
+Vector size 16777216
+sumArraysOnGPU <<<  32768, 256  >>> Time elapsed 0.000349 sec
+Arrays match.
