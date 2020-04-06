@@ -1,0 +1,29 @@
+./sMOG21_2pt Starting...
+==352299== NVPROF is profiling process 352299, command: ./sMOG21_2pt
+Using Device 0: Tesla V100-PCIE-16GB
+Matrix size: nx 16384 ny 16384
+sumMatrixOnGPUMix <<<(64,8192), (256,1)>>> elapsed 0.003989 sec
+Arrays match.
+
+==352299== Profiling application: ./sMOG21_2pt
+==352299== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   84.66%  543.48ms         2  271.74ms  269.61ms  273.87ms  [CUDA memcpy HtoD]
+                   14.73%  94.556ms         1  94.556ms  94.556ms  94.556ms  [CUDA memcpy DtoH]
+                    0.61%  3.8886ms         1  3.8886ms  3.8886ms  3.8886ms  sumMatrixOnGPUMix(float*, float*, float*, int, int)
+      API calls:   65.28%  638.63ms         3  212.88ms  94.676ms  274.07ms  cudaMemcpy
+                   24.46%  239.30ms         3  79.767ms  979.11us  237.29ms  cudaMalloc
+                    8.29%  81.096ms         1  81.096ms  81.096ms  81.096ms  cudaDeviceReset
+                    0.80%  7.8683ms       940  8.3700us     108ns  336.26us  cuDeviceGetAttribute
+                    0.40%  3.9209ms         1  3.9209ms  3.9209ms  3.9209ms  cudaDeviceSynchronize
+                    0.32%  3.1515ms        10  315.15us  312.29us  321.15us  cuDeviceTotalMem
+                    0.30%  2.8868ms         3  962.25us  922.14us  1.0013ms  cudaFree
+                    0.08%  754.91us         1  754.91us  754.91us  754.91us  cudaGetDeviceProperties
+                    0.06%  632.92us        10  63.292us  61.207us  65.194us  cuDeviceGetName
+                    0.01%  53.127us         1  53.127us  53.127us  53.127us  cudaLaunch
+                    0.00%  8.1130us         1  8.1130us  8.1130us  8.1130us  cudaSetDevice
+                    0.00%  4.9160us         1  4.9160us  4.9160us  4.9160us  cudaConfigureCall
+                    0.00%  3.8160us        20     190ns     106ns     471ns  cuDeviceGet
+                    0.00%  3.3890us         3  1.1290us     110ns  3.0300us  cuDeviceGetCount
+                    0.00%  2.6190us         5     523ns     114ns  1.7300us  cudaSetupArgument
+                    0.00%     311ns         1     311ns     311ns     311ns  cudaGetLastError

@@ -1,0 +1,22 @@
+./checkDeviceInfor Starting...
+Detected 10 CUDA Capable device(s)
+Device 0: "Tesla V100-PCIE-16GB"
+  CUDA Driver Version / Runtime Version          10.2 / 9.0
+  CUDA Capability Major/Minor version number:    7.0
+  Total amount of global memory:                 15.78 MBytes (16945512448 bytes)
+  GPU Clock rate:                                1380 MHz (1.38 GHz)
+  Memory Clock rate:                             877 Mhz
+  Memory Bus Width:                              4096-bit
+  L2 Cache Size:                                 6291456 bytes
+  Max Texture Dimension Size (x,y,z)             1D=(131072), 2D=(131072,65536), 3D=(16384,16384,16384)
+  Max Layered Texture Size (dim) x layers        1D=(32768) x 2048, 2D=(32768,32768) x 2048
+  Total amount of constant memory:               65536 bytes
+  Total amount of shared memory per block:       49152 bytes
+  Total number of registers available per block: 65536
+  Warp size:                                     32
+  Maximum number of threads per multiprocessor:  2048
+  Maximum number of threads per block:           1024
+  Maximum sizes of each dimension of a block:    1024 x 1024 x 64
+  Maximum sizes of each dimension of a grid:     2147483647 x 65535 x 65535
+  Maximum memory pitch:                          2147483647 bytes
+  

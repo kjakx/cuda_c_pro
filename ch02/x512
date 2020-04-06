@@ -1,0 +1,29 @@
+./sMOG21_2pt Starting...
+==352032== NVPROF is profiling process 352032, command: ./sMOG21_2pt
+Using Device 0: Tesla V100-PCIE-16GB
+Matrix size: nx 16384 ny 16384
+sumMatrixOnGPUMix <<<(32,8192), (512,1)>>> elapsed 0.003986 sec
+Arrays match.
+
+==352032== Profiling application: ./sMOG21_2pt
+==352032== Profiling result:
+            Type  Time(%)      Time     Calls       Avg       Min       Max  Name
+ GPU activities:   84.45%  534.85ms         2  267.42ms  267.20ms  267.64ms  [CUDA memcpy HtoD]
+                   14.94%  94.621ms         1  94.621ms  94.621ms  94.621ms  [CUDA memcpy DtoH]
+                    0.61%  3.8912ms         1  3.8912ms  3.8912ms  3.8912ms  sumMatrixOnGPUMix(float*, float*, float*, int, int)
+      API calls:   64.99%  630.06ms         3  210.02ms  94.740ms  267.85ms  cudaMemcpy
+                   24.45%  237.05ms         3  79.018ms  1.0389ms  234.94ms  cudaMalloc
+                    8.39%  81.326ms         1  81.326ms  81.326ms  81.326ms  cudaDeviceReset
+                    0.99%  9.5590ms       940  10.169us     103ns  1.0046ms  cuDeviceGetAttribute
+                    0.40%  3.9118ms         1  3.9118ms  3.9118ms  3.9118ms  cudaDeviceSynchronize
+                    0.32%  3.1121ms        10  311.21us  295.90us  345.47us  cuDeviceTotalMem
+                    0.30%  2.9252ms         3  975.08us  915.59us  1.0481ms  cudaFree
+                    0.08%  790.94us         1  790.94us  790.94us  790.94us  cudaGetDeviceProperties
+                    0.07%  652.23us        10  65.223us  60.721us  81.107us  cuDeviceGetName
+                    0.01%  59.827us         1  59.827us  59.827us  59.827us  cudaLaunch
+                    0.00%  5.6080us         1  5.6080us  5.6080us  5.6080us  cudaSetDevice
+                    0.00%  4.8830us         1  4.8830us  4.8830us  4.8830us  cudaConfigureCall
+                    0.00%  3.8400us        20     192ns     108ns     444ns  cuDeviceGet
+                    0.00%  3.1490us         5     629ns     104ns  2.0920us  cudaSetupArgument
+                    0.00%  2.5830us         3     861ns     174ns  2.1570us  cuDeviceGetCount
+                    0.00%     252ns         1     252ns     252ns     252ns  cudaGetLastError
